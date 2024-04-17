@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
+
+    {{!-- The important things we have in this layout for the login page are:
+    
+     the input element for the user to enter their email to attempt to login. It has an id of email-login.
+     
+     the input element for the user to enter their password to attempt to log in. It has an id of password-login.
+     
+     the button element which the user clicks to login --}}
+
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      <div>
+        <a href="/signup" class="login-signup-switch">Sign up instead</a>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/login.js"></script>

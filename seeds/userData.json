@@ -1,0 +1,152 @@
+[
+    {
+        "name": "codeMaster123",
+        "email": "codemaster123@hotmail.com",
+        "password": "P@ssw0rd"
+    },
+    {
+        "name": "webDevPro456",
+        "email": "webdevpro456@yahoo.com",
+        "password": "D3v3l0p!"
+    },
+    {
+        "name": "techSavvy789",
+        "email": "techsavvy789@gmail.com",
+        "password": "S@vvy123"
+    },
+    {
+        "name": "dataNinja23",
+        "email": "dataninja23@hotmail.com",
+        "password": "Ninj@567"
+    },
+    {
+        "name": "cyberSecExpert",
+        "email": "cybersecexpert@yahoo.com",
+        "password": "Secur1ty"
+    },
+    {
+        "name": "designGuru456",
+        "email": "designguru456@gmail.com",
+        "password": "D3s!gn456"
+    },
+    {
+        "name": "appDevPro789",
+        "email": "appdevpro789@hotmail.com",
+        "password": "AppDev123"
+    },
+    {
+        "name": "codeNerd23",
+        "email": "codenerd23@yahoo.com",
+        "password": "N3rd!567"
+    },
+    {
+        "name": "startupEnthusiast",
+        "email": "startupenthusiast@gmail.com",
+        "password": "St@rtup12"
+    },
+    {
+        "name": "cloudGeek456",
+        "email": "cloudgeek456@hotmail.com",
+        "password": "Cl0ud123"
+    },
+    {
+        "name": "fullStackDev789",
+        "email": "fullstackdev789@yahoo.com",
+        "password": "FullSt@ck"
+    },
+    {
+        "name": "AIenthusiast23",
+        "email": "aienthusiast23@gmail.com",
+        "password": "AI@45678"
+    },
+    {
+        "name": "blockchainGuru",
+        "email": "blockchainguru@yahoo.com",
+        "password": "Bl0ck!234"
+    },
+    {
+        "name": "pythonLover456",
+        "email": "pythonlover456@gmail.com",
+        "password": "Pyth0n!56"
+    },
+    {
+        "name": "javascriptNinja789",
+        "email": "javascriptninja789@yahoo.com",
+        "password": "J@vascript"
+    },
+    {
+        "name": "frontendDevPro",
+        "email": "frontenddevpro@gmail.com",
+        "password": "Fr0ntend"
+    },
+    {
+        "name": "backendNerd23",
+        "email": "backendnerd23@yahoo.com",
+        "password": "B@ckend23"
+    },
+    {
+        "name": "gameDevMaster",
+        "email": "gamedevmaster@gmail.com",
+        "password": "G@meD3v1"
+    },
+    {
+        "name": "UXdesigner456",
+        "email": "uxdesigner456@yahoo.com",
+        "password": "UXD3s!gn"
+    },
+    {
+        "name": "techInnovator789",
+        "email": "techinnovator789@gmail.com",
+        "password": "Innov@te"
+    },
+    {
+        "name": "dataScienceGeek",
+        "email": "datasciencegeek@yahoo.com",
+        "password": "Dat@1234"
+    },
+    {
+        "name": "infoSecPro456",
+        "email": "infosecpro456@gmail.com",
+        "password": "Inf0S3c!"
+    },
+    {
+        "name": "mobileAppDev789",
+        "email": "mobileappdev789@yahoo.com",
+        "password": "M0b!leD3v"
+    },
+    {
+        "name": "webDesignNinja23",
+        "email": "webdesignninja23@gmail.com",
+        "password": "W3bN!nja"
+    },
+    {
+        "name": "cloudArchitect456",
+        "email": "cloudarchitect456@yahoo.com",
+        "password": "Arch!tect"
+    },
+    {
+        "name": "backendDevPro789",
+        "email": "backenddevpro789@gmail.com",
+        "password": "B@ckendP4ss"
+    },
+    {
+        "name": "machineLearningEnthusiast",
+        "email": "machinelearningenthusiast@yahoo.com",
+        "password": "M@ch1neL3arn"
+    },
+    {
+        "name": "devOpsNinja23",
+        "email": "devopsninja23@gmail.com",
+        "password": "D3v0ps!23"
+    },
+    {
+        "name": "productManager456",
+        "email": "productmanager456@yahoo.com",
+        "password": "Pr0dM@n!"
+    }, 
+    {
+        "name": "cloudUser789",
+        "email": "clouduser789@hotmail.com",
+        "password": "Cl0udUs3r"
+    }
+]

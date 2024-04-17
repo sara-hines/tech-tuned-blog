@@ -12,8 +12,10 @@ Comment.init(
       autoIncrement: true,
     },
     content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
+    // date_created is automatically generated, no need to pass date_created from the frontend to the post route to http://localhost:3001/api/comments
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -21,6 +23,7 @@ Comment.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id',
@@ -28,6 +31,7 @@ Comment.init(
     },
     blog_id: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         references: {
           model: 'blog',
           key: 'id',
@@ -39,7 +43,7 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog',
+    modelName: 'comment',
   }
 );
 
