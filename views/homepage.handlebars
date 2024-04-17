@@ -1,6 +1,9 @@
-<div class="row mb-4">
-    <h2>
-        This Is Where Blog Post 1 Might Go
-    </h2>
+{{#each blogs as |blog|}}
+<div>
+    <h2><a href='/blog/{{blog.id}}'>{{blog.title}}</a><span>Created {{ format_date blog.date_created }}</span></h2>
+    <p>{{getPreview blog.content}}</p>
+    {{!-- I want this to be a button --}}
+    <a href='/blog/{{blog.id}}'>Read Post</a>
 </div>
+{{/each}}
 

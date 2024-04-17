@@ -1,0 +1,41 @@
+<div class="row">
+  
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    {{!-- The important parts of this view are:
+    
+    the input element for the user's name, which has id="name-signup"
+    
+    the input element for the user's email, which has id="email-signup" 
+    
+    the input element for the user's password, which has id="password-signup" 
+    
+    the button with the text "signup" for the user to submit the form
+    
+    These elements are being correctly referenced in public/js/signup.js
+    --}}
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+      <div>
+        <a href="/login" class="login-signup-switch">Log in instead</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/signup.js"></script>

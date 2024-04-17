@@ -1,0 +1,17 @@
+<div>
+    <h2>Your Dashboard</h2>
+</div>
+
+{{#if blogs.length}}
+<div>
+    <h3>Posts:</h3>
+    {{#each blogs as |blog|}}
+    <div style="display: flex; flex-direction: row;">
+        <h4><a href='/blog/{{blog.id}}'>{{blog.title}}</a><span>Created {{ format_date blog.date_created }}</span></h4>
+        <a href='/modify-blog/{{blog.id}}'>Update or Delete</a>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
+<div><a href='/new-blog'>+ New Post</a></div>

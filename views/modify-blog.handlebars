@@ -1,0 +1,16 @@
+<h2>Update or Delete a Post</h2>
+
+<form class="modify-blog-form" id="{{id}}">
+    <div>
+        <label for="blog-post-title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="blog-post-title" aria-describedby="blog-post-title" value="{{title}}">
+    </div>
+    <div class="mb-3">
+        <label for="blog-post-content" class="form-label">Content</label>
+        <textarea class="form-control" id="blog-post-content" rows="3">{{content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Post</button>
+    <button type="button" class="btn btn-primary delete-btn">Delete Post</button>
+</form>
+
+<script src="/js/modify-blog.js"></script>
