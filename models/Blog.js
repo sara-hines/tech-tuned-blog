@@ -19,6 +19,10 @@ Blog.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,

@@ -1,41 +1,101 @@
-<div class="row">
-  
-  <div class="col-md-6">
-    <h2>Signup</h2>
+<section class='container-lg pt-4 mt-0 align-items-center'>
+  <div class='row g-5 justify-content-center pt-0 mt-0 d-flex align-items-stretch anim-text-row'>
+    <div class='col-md-5 text-center background-card pt-0 mt-0'>
+      <div class='row pt-0 mt-0'>
+        <div class='col-12'>
+          <h2 class='login-signup-title'>SIGNUP</h2>
+        </div>
+        <div class='col-12 login-signup-subtitle px-4 pb-0 mb-0'>
+          <p><span class='pb-0 mb-0'>
+            {{> turn-arrow-icon }}
+            </span>experience the full benefits of a learning-centric community</p>
+        </div>
+        <div class='col-12 px-0'>
+          <form class='form signup-form px-4'>
+            <div class='signup-form-group align-items-center'>
+              <label for='name-signup' class='form-label text-start'>Username:</label>    
+              <div class='input-group login-signup-input'>
+                <span class='input-group-text'>
+                {{> person-icon }}
+                </span>
+                <input class='form-control form-control-lg mb-0 pb-0' type='text' id='name-signup' placeholder='e.g. techsavvy' />
+              </div>
+            </div>
 
-    {{!-- The important parts of this view are:
-    
-    the input element for the user's name, which has id="name-signup"
-    
-    the input element for the user's email, which has id="email-signup" 
-    
-    the input element for the user's password, which has id="password-signup" 
-    
-    the button with the text "signup" for the user to submit the form
-    
-    These elements are being correctly referenced in public/js/signup.js
-    --}}
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+            <div class='signup-form-group'>
+              <label for='email-signup' class='form-label text-start'>E-mail:</label>
+              <div class='mb-0 input-group login-signup-input'>
+                <span class='input-group-text'>
+                {{> envelope-icon }}
+                </span>
+                <input class='form-control form-control-lg mb-0 pb-0' type='email' id='email-signup' placeholder='e.g. techsavvy@gmail.com'/>
+              </div>
+            </div>
+
+            <div class='signup-form-group'>
+              <label for='password-signup' class='form-label text-start'>Password:</label>
+              <div class='mb-0 input-group login-signup-input'>
+                <span class='input-group-text'>
+                  {{> password-icon }}
+                </span>
+                <input class='form-control form-control-lg' type='password' id='password-signup'/>
+              </div>
+            </div>
+
+            <div class='signup-form-group'>
+              <button class='btn btn-md login-signup-btn' type='submit'>SIGNUP</button>
+            </div>
+
+            <div>
+              <p class='login-signup-text'>Already a member?<a href='/login' class='login-signup-switch'>Log in instead</a></p>
+            </div>
+
+          </form>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+    </div>
+
+    <div class='col-md-6 text-center pt-0 mt-0 d-none d-lg-flex anim-div'>
+      <div id='animation-wrapper' class='align-items-start pt-0 mt-0'>
+        <div id='animation-container' class='pt-0 mt-0'></div>
       </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-      <div>
-        <a href="/login" class="login-signup-switch">Log in instead</a>
-      </div>
-    </form>
+    </div>
+
   </div>
-</div>
+</section>
 
-<script src="/js/signup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+<script src='/js/signup.js'></script>
+
+
+{{!-- The important parts of this view are:
+
+the input element for the user's name, which has id='name-signup'
+
+the input element for the user's email, which has id='email-signup' 
+
+the input element for the user's password, which has id='password-signup' 
+
+the button with the text 'signup' for the user to submit the form --}}
+
+{{!-- <form class='form signup-form'>
+  <div class='signup-form-group'>
+    <label for='name-signup'>name:</label>
+    <input class='form-input' type='text' id='name-signup' />
+  </div>
+  <div class='signup-form-group'>
+    <label for='email-signup'>email:</label>
+    <input class='form-input' type='text' id='email-signup' />
+  </div>
+  <div class='signup-form-group'>
+    <label for='password-signup'>password:</label>
+    <input class='form-input' type='password' id='password-signup' />
+  </div>
+  <div class='signup-form-group'>
+    <button class='btn btn-primary' type='submit'>signup</button>
+  </div>
+  <div>
+    <a href='/login' class='login-signup-switch'>Log in instead</a>
+  </div>
+</form> --}}
+

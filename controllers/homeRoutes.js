@@ -47,11 +47,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
                 { 
                     model: Blog, 
                 },
+                {
+                    model: Comment,
+                },
             ],
         });
         // const userData = await User.findByPk(req.session.user_id);
-
-        console.log(userData);
 
         const user = userData.get({ plain: true });
 
@@ -85,6 +86,7 @@ router.get('/blog/:id', async (req, res) => {
         });
 
         const blog = blogData.get({ plain: true });
+        console.log(blog);
 
         res.render('blog', {
             ...blog, 

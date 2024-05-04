@@ -1,64 +1,259 @@
 :root {
     --brown: #a88f82;
     --tan: #f5e1d5;
-    --teal: #71a8a7;
+    --teal: #00C1BD;
     --lightteal: #d5f5f5;
     --light: #fffaf7;
+    --dark: #1A1B20;
 }
   
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 body, body * {
-    font-family: 'UniversTE40L', 'UnicodeL' !important;
+    color: white;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
-h2 {
-    font-family: 'UniversTE40L', 'UnicodeL' !important;
+.navbar-container {
+    margin: 0 10%;
+    padding: 0;
 }
 
-::selection {
-    color: var(--brown);
-    background-color: var(--light);
+/* Ensures the nav element spans the full width of the viewport. */
+nav {
+    width: 100%;
+    margin: 0;
 }
 
-.custom-navbar {
-    background-color: var(--teal);
+/* Default styling (screens smaller than the 992px lg breakpoint) for the nav-item containers which contain the nav-links. */
+.nav-item {
+    min-width: 160px;
+    height: 100%;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-/* Sometimes, custom CSS classes may need to be used with descendant selectors to achieve the correct specificity to override existing Bootstrap styles. */
-.custom-navbar .navbar-nav .custom-nav-link {
-    font-size: 1.5rem;
-    color: var(--lightteal);
+/* Controls the border for the custom mobile burger nav. */
+.custom-toggler {
+    border-color: white;
 }
 
-.custom-navbar .navbar-nav .custom-nav-link:hover {
-    color: var(--light);
+/* The actual hambuger icon for the custom mobile burger nav. */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.hero {
-    background-color: var(--lightteal);
-    color: var(--teal);
+/* The navigation links in the nav bar should not have white borders around them when appearing under the hamburger dropdown for smaller screens. The below media query helps to ensure that the white borders only appear around the navigation links once the screen size has increased to the large breakpoint and the expanded navbar view is used. */
+@media screen and (min-width: 992px) {
+    .nav-item {
+        border-style: solid;
+        border-color: white;
+        width: 110px;
+        height: 100%;
+        text-align: center;
+        justify-content: space-around;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 
-.custom-btn {
-    background-color: var(--brown);
-    color: var(--light);
+/* Hover styling for the navigation links. */
+.nav-item:hover {
+    background-color: #353C42;  
 }
 
-.custom-btn:hover {
-    background-color: var(--tan);
-    color: var(--brown);
+main {
+    height: 100%;
 }
 
-.custom-card {
-    border-color: var(--teal);
-    color: var(--brown);
+/* Ensures the green-nodes.png background image spans the full height of the page. */
+#background-nodes {
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat;
+
 }
 
-.custom-card-header {
-    background-color: var(--teal);
-    color: var(--lightteal);
+/* Gives a 5% margin in the x direction to each of the pages rendered in the body of main.handlebars.  */
+.pg-wrapper {
+    min-height: 100vh;
+    margin: 0 10%;
+    width: 80%;
+    /* align-self: center; */
 }
 
-.login-signup-switch {
-    color: var(--teal);
+section {
+    /* padding: 100px 0; */
+    min-height: 100vh;
+    width: 100%;
 }
-  
+
+#animation-wrapper {
+    height: 350px;
+    background-color: rgba(0,0,0,0.7);
+
+}
+
+#animation-container {
+    /* background-color: red; */
+    color: #fff;
+    height: 100%;
+}
+
+.background-card {
+    /* background-color: red; */
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+}
+
+/* Styling for the introductory text column on the homepage */
+
+@media screen and (min-width: 768px) {
+    .anim-text-row {
+        margin: 20px 0px;
+    }
+    .anim-div {
+        display: none;
+        /* padding-left: 20px;
+        padding-right: 20px; */
+    }
+    .background-card {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .pg-title {
+        font-size: 40px;
+    }
+    .pg-subtitle {
+        font-size: 25px;
+    }
+    .pg-info {
+        font-size: 20px;
+    }
+    .action {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .anim-text-row {
+        margin: 20px 0px;
+    }
+    .anim-div {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .background-card {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .pg-title {
+        font-size: 40px;
+    }
+    .pg-subtitle {
+        font-size: 25px;
+    }
+    .pg-info {
+        font-size: 20px;
+    }
+    .action {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .anim-text-row {
+        margin-top: 24px;
+    }
+    .pg-title {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    .pg-subtitle {
+        font-size: 28px;
+    }
+    .pg-info {
+        font-size: 24px;
+    }
+    .action {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .anim-text-row {
+        margin-top: 0px;
+    }
+    .pg-title {
+        font-size: 64px;
+        margin-top: 20px;
+    }
+    .pg-subtitle {
+        font-size: 31px;
+    }
+    .pg-info {
+        font-size: 25px;
+    }
+    .action {
+        font-size: 31px;
+    }
+}
+
+
+
+/* For xs and sm screens, the blog posts on the home page do not need any additional margin beyond the 5% margin in the x direction which is controlled by .pg-wrapper, so the #posts-container is 100% width by default. */
+#posts-container {
+    width: 100%;
+}
+
+/* Helps to essentially give extra margin for the blog posts on the homepage when the screen size increases to the medium breakpoint. */
+@media screen and (min-width: 768px) {
+    .posts-wrapper {
+        width: 85%;
+    }   
+}
+
+/* This is used to style the container for each blog post which appears on the homepage. */
+.blog-blurb {
+    /* background-color: red; */
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* This styles the "Created on [date] at [time] by [user]" text which appears for each blog on the homepage. */
+.created-on {
+    font-style: italic;
+}
+
+/* This styles the 3 sentence preview of a blog which appears on the homepage. */
+.preview {
+    text-align: justify;
+}
+
+/* This styles the "Read more" buttons on the homepage (which navigate the user to an individual blog post's page when clicked). */
+.custom-button {
+    background-color: #6242EB;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    width: 150px;
+    border-radius: 0;
+}
+
+/* This controls the hover effect for the "Read more" buttons on the homepage (which navigate the user to an individual blog post's page when clicked). */
+.custom-button:hover {
+    background-color: #7659EB;
+    border-style: solid;
+    border-color: white;
+}
+

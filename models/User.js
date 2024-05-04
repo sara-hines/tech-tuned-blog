@@ -16,6 +16,11 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
