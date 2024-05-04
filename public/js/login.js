@@ -30,3 +30,15 @@ document
   // The event listener is added to the form element which we were able to select using the previous line. So, we're listening on the whole form element for the submit event. When the submit event happens, the loginFormHandler function is called.
   .addEventListener('submit', loginFormHandler);
 
+
+// Load the animation JSON file
+var animationData = {
+  container: document.getElementById('animation-container'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: '/img/login-animation.json' // Path to JSON animation file
+};
+// Display the animation
+var anim = lottie.loadAnimation(animationData);
+

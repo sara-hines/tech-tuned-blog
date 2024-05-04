@@ -1,23 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// Post route to http://localhost:3001/api/users in order to create a new user. It looks like this is working if I send a post request in Insomnia with name, email, and password in JSON body, and I got a 200 response with this sent back: 
-// {
-// 	"id": 2,
-// 	"name": "gina",
-// 	"email": "gina@hotmail.com",
-// 	"password": "$2b$10$pDxLdnV4pNttYigi8tflK.QG6lQ0HE2WDSwn7QJi32YNXv4NHYzOC"
-// }
-// BUT I'm confused about making this request in the browser. If I click the signup link from nav bar in browser, I'm sent to http://localhost:3001/signup, and if I enter name, email, and password to signup, I get:  
-// GET http://localhost:3001/profile 404 (Not Found) error, Cannot GET /profile displayed in browser
 router.post('/', async (req, res) => {
   try {
-    // The req.body should have name, email, and password, but I'm getting an error before I'd be able to console.log the req.body
     console.log(req.body);
     const userData = await User.create(req.body);
 
-    // A property should be created on the req.session obj called user_id, and set to the autoincremented id created for that user in userData.
-    // A property should be created on the req.session obj called logged_in, and it should be set to true.
+    // A property will be created on the req.session obj called user_id, and set to the autoincremented id created for that user in userData.
+    // A property will be created on the req.session obj called logged_in, and it will be set to true.
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -33,7 +23,6 @@ router.post('/', async (req, res) => {
 // Post route to http://localhost:3001/api/users/login in order to log in
 router.post('/login', async (req, res) => {
   try {
-    // Checking if we already have the user in our database. If we do, we will get something back for userData. IMPORTANT: WE ARE CHECKING IF WE HAVE THE USER IN OUR DATABASE BY SEEING IF WE HAVE THEIR EMAIL. SO, MAKE SURE THAT THE EMAIL IS SAVED WHEN CREATING A USER. BUT ALSO, REMEMBER THAT, PER OUR MODEL, A name, email, and password ARE REQUIRED TO CREATE A USER.
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     console.log(`Here is your userData:
@@ -61,7 +50,7 @@ router.post('/login', async (req, res) => {
 
     // If we had the user's email saved, and the user entered the correct password, we'll give their session a user_id and a logged_in of true
     req.session.save(() => {
-      // WHAT WILL userData.id BE HERE? IT WILL BE THE id WE ALREADY HAD SAVED IN THE DATABASE FOR THIS PARTICULAR USER. 
+      // userData.id will be the id already saved in the database for the user
       req.session.user_id = userData.id;
       req.session.logged_in = true;
       
@@ -69,7 +58,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
-    // 400 Bad Request response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error 
+    // 400 Bad Request response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error.
     console.error(err);
     res.status(400).json(err);
   }

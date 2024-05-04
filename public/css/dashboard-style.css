@@ -1,0 +1,29 @@
+.indiv-post-link:hover {
+    color: #67B8FA;
+}
+
+.update-del-btn {
+    background-color: #2E03E4;
+    color: white;
+    border-style: solid;
+    border-color: white;
+}
+
+.update-del-btn:hover {
+    background-color: #404EE4;
+    color: white;
+    border-style: solid;
+    border-color: white;
+}
+
+.new-post-link {
+    color: #67B8FA;
+    font-weight: 900;
+    text-underline-offset: 3px;
+}
+
+.new-post-link:hover {
+    color: #99d0fc;
+    font-weight: 900;
+    text-underline-offset: 3px;
+}

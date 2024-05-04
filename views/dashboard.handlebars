@@ -1,17 +1,111 @@
-<div>
+<section class='pt-0 mt-0 px-0 mx-0 align-items-center'>
+    <div class='background-card py-5 px-5'>
+        <h1 class='h2 py-1 text-center'>Welcome, {{name}}!</h2>
+        <div class='row g-4 justify-content-center align-items-start'>
+            <div class='col-md-6 text-center text-md-start d-flex flex-column'>
+                <div class='row align-items-center'>
+                    <h3 class='h4 py-3 text-center'>Your Stats:</h3>
+                </div>
+
+                <div class='row align-items-center'>
+                    <div class='col-3'>
+                        <i class="bi bi-calendar-check" style='font-size: 4em;'></i>
+                    </div>
+                    <div class='col-9' style='font-size: 18px; line-height: 32px'>
+                        <p>You've been with TECH<i class="bi bi-soundwave"></i>TUNED for: {{getUserAge date_created}}</p>
+                    </div>
+                </div>
+
+                <div class='row align-items-center'>
+                    <div class='col-3'>
+                        <i class="bi bi-card-text" style='font-size: 4em;'></i>
+                    </div>
+                    <div class='col-9' style='font-size: 18px; line-height: 32px'>
+                        <p>Number of blog posts you've created: {{blogs.length}}</p>
+                    </div>
+                </div>
+                <div class='row align-items-center'>
+                    <div class='col-3'>
+                        <i class="bi bi-chat-dots" style='font-size: 4em;'></i>
+                    </div>
+                    <div class='col-9' style='font-size: 18px; line-height: 32px'>
+                        <p>Number of comments you've made on posts: {{comments.length}}</p>
+                    </div>
+                </div>
+
+                <div class='row align-items-center'>
+                    <h3 class='h4 py-3 text-center'>Thanks for being here!</h3>
+                </div>
+
+            </div>
+
+            <div class='col-md-6 text-center text-md-start'>
+                {{#if blogs.length}}
+                <div class='text-center'>
+                    <h3 class='h4 py-3 text-center'>Your Posts:</h3>
+                    {{#each blogs as |blog|}}
+                    <div style='font-size: 18px; line-height: 32px'>
+                        <h4 class='pt-3 pb-2' style='text-underline-offset: 3px;'><a href='/blog/{{blog.id}}' class='indiv-post-link'>{{blog.title}}</a></h4>
+                        <p class='py-2'>Created {{ format_date blog.date_created }}</p>
+                        <a href='/modify-blog/{{blog.id}}' class='btn update-del-btn my-2' style='font-size: 18px;'>Update or Delete</a>
+                    </div>
+                    {{/each}}
+                </div>
+
+                {{else}}
+                    <p class='py-2' style='font-size: 18px; line-height: 32px;'>You haven't created any posts yet. Click the New Post button to share your expertise on a certain technology, your interpretation of a technical concept, or an opinion piece you're passionate about!</p>
+                {{/if}}
+                
+                <div class='text-center py-3' style='font-size: 24px; line-height: 36px;'>
+                    <p>Something on your mind to share?</p>
+                    <p><span class='px-3'><i class="bi bi-arrow-return-right"></i></span><a href='/new-blog' class='new-post-link'>Create a new post here</a>.</p>
+                </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+{{!-- <div>
     <h2>Your Dashboard</h2>
+</div> --}}
+
+{{!-- 
+<div style='height: 200px; font-size: 7em;'>
+    <i class="bi bi-calendar-check"></i>
 </div>
+
+<div style='height: 200px; font-size: 7em;'>
+    <i class="bi bi-card-text"></i>
+</div>
+
+<div style='height: 200px; font-size: 7em;'>
+    <i class="bi bi-chat-dots"></i>
+</div> --}}
+
+{{!-- 
+<p>You've been with TECH<i class="bi bi-soundwave"></i>TUNED for: {{getUserAge date_created}}</p>
+<p>Number of blog posts you've created: {{blogs.length}}</p>
+<p>Number of comments you've made on posts: {{comments.length}}</p>
+
 
 {{#if blogs.length}}
 <div>
     <h3>Posts:</h3>
     {{#each blogs as |blog|}}
-    <div style="display: flex; flex-direction: row;">
+    <div style='display: flex; flex-direction: row;'>
         <h4><a href='/blog/{{blog.id}}'>{{blog.title}}</a><span>Created {{ format_date blog.date_created }}</span></h4>
         <a href='/modify-blog/{{blog.id}}'>Update or Delete</a>
     </div>
     {{/each}}
 </div>
-{{/if}}
 
-<div><a href='/new-blog'>+ New Post</a></div>
+{{else}}
+<p>You haven't created any posts yet. Click the New Post button to share your expertise on a certain technology, your interpretation of a technical concept, or an opinion piece you're passionate about!</p>
+{{/if}}
+<a href='/new-blog'>+ New Post</a> --}}
+
+
+
+

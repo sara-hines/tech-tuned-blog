@@ -1,12 +1,12 @@
 const formEl = document.getElementsByTagName('form')[0];
 const id = formEl.id;
-console.log("ID:" + id);
+console.log('ID:' + id);
 
 const updateBlogHandler = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector("#blog-post-title").value.trim();
-    const content = document.querySelector("#blog-post-content").value.trim();
+    const title = document.querySelector('#blog-post-title').value.trim();
+    const content = document.querySelector('#blog-post-content').value.trim();
 
     if (title && content) {
         const response = await fetch(`/api/blogs/${id}`, {

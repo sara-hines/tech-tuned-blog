@@ -1,27 +1,47 @@
-<div>
-    <h2>{{title}}</h2>
-    <h3>Created by {{user.name}} on {{format_date date_created}}</h3>
-    <p>{{getParagraph1 content}}</p>
-    <p>{{getParagraph2 content}}</p>
+<div class='row g-0 justify-content-center align-items-center'>
+    <div class='blog-container col-md-10 py-5 px-5'>
+        <h2 class='blog-title pb-3 text-center'>{{title}}</h2>
+        <hr class='custom-hr my-2'>
+        <h3 class='blog-metadata py-3 text-center'>Created by {{user.name}} on {{format_date date_created}}</h3>
 
+        <div class='image-container my-3 mx-auto text-center'>
+            <img class='img-fluid' src='{{image}}' alt='blog-image'/>
+        </div>
 
-    {{#if logged_in}}
-    <h3>Leave a comment!</h3>
-    <form class="new-comment-form" id="{{id}}">
-    <div class="mb-3">
-        <label for="comment-input" class="form-label">Comment</label>
-        <input type="text" class="form-control" id="comment-input" aria-describedby="comment-input">
+        <p class='blog-paragraph py-3'><span class='px-3'><i class="bi bi-caret-right"></i></span>{{getParagraph1 content}}</p>
+        <p class='blog-paragraph py-3'>{{getParagraph2 content}}<span class='px-3'><i class="bi bi-caret-left"></i></span></p>
+        <hr class='custom-hr my-2'>
+
+        {{#if logged_in}}
+
+        <h3 class='py-3 text-center fst-italic'>Share your experience with this topic or ask a thought-provoking question:</h3>
+
+        <form class='new-comment-form' id='{{id}}'>
+        <div class='py-3'>
+            <label for='comment-input' class='form-label' style='display: none;'>Comment</label>
+            <textarea type='text' class='form-control comment-textarea' id='comment-input' aria-describedby='comment-input'></textarea>
+        </div>
+        <div class='py-3 text-center'>
+            <button type='submit' class='btn btn-lg comment-btn'>Submit Comment</button>
+        </div>
+
+        </form>
+        {{else}}
+        <h3 class='py-5 text-center fst-italic'><a href='/login'>Log in</a> to leave a comment and contribute to the discussion.</h3>
+        <hr class='custom-hr my-2'>
+        {{/if}}
+
+        {{#if comments}}
+        <div class='py-3 comments-container'>
+            {{#each comments}} 
+            <p><span class='px-2'><i class="bi bi-person-circle"></i></span>{{user.name}} <span class='px-2'><i class="bi bi-clock-history"></i></span>{{format_date date_created}}: {{content}}</p>
+            <hr class='custom-hr my-2'>
+            {{/each}}
+        </div>
+        {{/if}}
     </div>
-    <button type="submit" class="btn btn-primary">Submit My Comment</button>
-    </form>
-    {{else}}
-    <h3><a href='/login'>Log in</a> to leave a comment!</h3>
-    {{/if}}
-
-    <h3>Comments:</h3>
-    {{#each comments}} 
-    <p>{{user.name}} on {{format_date date_created}} said: {{content}}</p>
-    {{/each}}
 </div>
 
-<script src="/js/new-comment.js"></script>
+
+
+<script src='/js/new-comment.js'></script>
