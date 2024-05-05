@@ -1,7 +1,40 @@
-/* .form-background {
+.form-background {
     background-color: #212529;
     margin: 0 auto;
+    margin-top: 5%;
     margin-bottom: 5%;
     padding: 20px;
-    width: 80%;
-} */
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px 10px black;
+}
+
+.new-blog-title {
+    font-size: 36px;
+
+}
+
+.new-blog-label {
+    font-size: 22px;
+}
+
+.new-post-btn {
+    background-color: #2E03E4;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    font-size: 22px;
+    width: 20%;
+    min-width: 190px;
+}
+
+.new-post-btn:hover {
+    /* background-color: #3225E4; */
+    /* background-color: #3A37E4; */
+    background-color: #404EE4;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    font-size: 22px;
+    width: 20%;
+    min-width: 190px;
+}
